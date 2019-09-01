@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+  int r = 0, h = 0;
+  float at, ab, al, v;
+  printf("Informe o raio e a altura do cilindro \n");
+  printf("Raio(cm):");
+  scanf ("%d", &r);
+  printf("Altura(cm):");
+  scanf ("%d", &h);
+  ab = (3.14)*(r*r); // area da base -- OBS: O 3,14 corresponde ao PI.
+  al = 2*(3.14)*(r*h); // area lateral 
+  at = (2*ab + al); // area total
+  v = ab*h; // volume
+  printf ("Área do Cilindro: %.2f cm^2 \n", at);
+  printf ("Volume do Cilindro %.2f cm^3 \n", v);
+  return 0;
+}
