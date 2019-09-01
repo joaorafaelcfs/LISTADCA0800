@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+  int tmp = 0, qnt = 0;
+  float valor, custo; 
+  printf("Ha quantos anos essa pessoa fuma? \n ");
+  scanf ("%d", &tmp);
+  printf("Quantos cigarros essa pessoa fuma por dia? \n ");
+  scanf ("%d", &qnt);
+  printf("Quanto custa uma carteira de cigarro? \n");
+  scanf ("%f", &valor);
+  printf("Considerando que um maço de cigarro vem com 20 cigarros... \n");
+  custo = ((tmp*365)*qnt*(valor/20));
+  printf("Então o fumante já gastou na vida com cigarro: R$ %.2f", custo); 
+  return 0;
+}
