@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0, y = 0;
+  printf ("Digite o dividendo: ");
+  scanf ("%d", &x);
+  printf ("Digite o divisor: ");
+  scanf ("%d", &y);
+  printf ("Quociente: %d \n", x/y);
+  printf ("Resto: %d \n", x%y);
+  return 0;
+}
