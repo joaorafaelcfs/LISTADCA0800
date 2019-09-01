@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+  int L1 = 0,L2 = 0,L3 = 0;
+  int tmp1, tmp2, tmp3;
+  printf("Digite o primeiro número: ");
+  scanf("%d" ,&L1);
+  printf("Digite o segundo número: ");
+  scanf("%d", &L2);
+  printf("Digite o terceiro número: ");
+  scanf("%d" ,&L3);
+  printf("Numero 1: %d \n", L1);
+  printf("Numero 2: %d \n", L2);
+  printf("Numero 3: %d \n", L3);
+  printf("-------- \n");
+  if (L1 > L2){
+      tmp1 = L1;
+      L1 = L2;
+      L2 = tmp1;
+  } if (L1 > L3){
+      tmp3 = L1;
+      L1 = L3;
+      L3 = tmp3;
+  } if (L2 > L3){
+      tmp2 = L2;
+      L2 = L3;
+      L3 = tmp2;
+  }
+  printf ("Colocando os números em ordem crescente \n");
+  printf("%d < %d < %d \n", L1, L2, L3);
+  return 0;
+}
