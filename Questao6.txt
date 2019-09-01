@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0, y = 0;
+  float quociente;
+  printf("Digite dois números inteiros \n");
+  printf("Número 1: ");
+  scanf("%d", &x);
+  printf("Número 2: ");
+  scanf("%d", &y);
+  printf("Soma: %d + %d = %d \n", x, y, x + y);
+  printf("Produto: %d x %d = %d \n",x, y, x*y);
+  printf ("Quociente: %d/%d = %d \n", x, y, x/y);  
+  return 0;
+}
