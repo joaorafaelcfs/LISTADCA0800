@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+  float valor = 0, imposto, lucro;
+  printf("Qual o valor do carro? R$ ");
+  scanf("%f", &valor);
+  imposto = valor*0.45;
+  lucro = valor*0.12;
+  printf("Imposto = %.2f \n", imposto);
+  printf("Lucro do distribuidor = %.2f \n", lucro);
+  return 0;
+}
