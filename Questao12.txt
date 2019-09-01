@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+  int n1 = 0, n2 = 0, quociente;
+  printf("Digite o primeiro numero: ");
+  scanf("%d", &n1);
+  printf("Digite o segundo numero: ");
+  scanf("%d", &n2);
+  if (n2 != 0) {
+    quociente = n1/n2;
+    printf ("%d/%d = %d", n1, n2, quociente);
+  }  else {
+    printf ("DIVISÃO POR ZERO");
+  }
+  return 0;
+}
