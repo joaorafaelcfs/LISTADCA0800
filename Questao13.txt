@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void) {
+  int a = 0, b = 0, c = 0;
+  printf("Digite três valores \n");
+  printf ("Valor 1: ");
+  scanf("%d", &a);
+  printf ("Valor 2: ");
+  scanf("%d", &b);
+  printf ("Valor 3: ");
+  scanf("%d", &c);
+
+  if (a>=b && a>=c){
+    if ((a == b) && (a == c)){
+      printf ("Os três valores são iguais --- %d, %d, %d", a, b, c); 
+    } else if (a == c){
+      printf ("Os valores 1 e 3 são os maiores --- %d , %d", a, c);
+    } else if (a == b){
+      printf ("Os valores 1 e 2 são os maiores --- %d , %d", a, b); 
+    } else{
+      printf ("O valor 1 é o maior --- %d", a);  
+    }      
+  }else if (b>=c){   
+     if (b == c){
+      printf ("Os valores 2 e 3 são os maiores --- %d , %d", a, c);
+    } else {
+      printf ("O valor 2 é o maior --- %d", b);  
+    }   
+  } else {
+    printf ("O valor 3 é o maior --- %d", c);
+  }
+  return 0;
+}
