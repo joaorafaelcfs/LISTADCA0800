@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(void) {
+  int a = 0, b = 0, c = 0, d = 0, x;
+  printf ("Informe quatro números:\n ");
+  scanf ("%d", &a);
+  scanf ("%d", &b);
+  scanf ("%d", &c);
+  scanf ("%d", &d);
+  if (a%2 == 0){
+    a = a;
+  }else {
+    a = 0;
+  }if (b%2 == 0){
+    b = b;
+  } else{
+    b = 0;
+  }if (c%2 == 0){
+    c = c;
+  }else{
+    c = 0;
+  }if (d%2 == 0){
+    d = d;
+  }else {
+    d = 0;
+  }
+  x = a + b + c + d;
+  printf ("A soma dos numeros pares é igual a = %d", x);
+  return 0;
+}
