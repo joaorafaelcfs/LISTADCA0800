@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main(void) {
+  float m1 = 0,m2 = 0,m3 = 0,mediaf, nreposicao;
+  printf("Digite a primeira nota: ");
+  scanf("%f", &m1);  
+  printf("Digite a segunda nota: ");
+  scanf("%f", &m2);  
+  printf("Digite a terceira nota: ");
+  scanf("%f", &m3);  
+  mediaf = (m1+m2+m3)/3;  
+  if((mediaf >= 7) || ((mediaf>=5) && (m1 >= 3 && m2 >= 3 && m3 >= 3))){
+    printf ("-------------------\n");
+    printf("A media final eh: %3.2f\n", mediaf);
+    printf("O aluno esta aprovado");
+  } else if((mediaf >= 3)) {
+      printf ("-------------------\n");
+      printf("A media final eh: %3.2f \n", mediaf);
+      printf("O aluno esta na reposição \n");      
+      printf ("-------------------\n"); 
+      if (m1<m2 && m1<m3){
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &nreposicao);
+        m1 = nreposicao;
+      } else if (m2<=m1 && m2<m3) {
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &nreposicao);
+        m2 = nreposicao;
+      } else if (m3<=m1 && m3<=m2) {
+        printf("Digite a nota da reposicao: ");
+        scanf("%f", &nreposicao);
+        m3 = nreposicao;       
+      } 
+      mediaf = (m1+m2+m3)/3;
+      printf ("-------------------\n");
+      printf("media final: %3.2f \n", mediaf);
+      if ((mediaf >= 7) || (mediaf >= 5 && nreposicao >= 3)){        
+        printf ("O aluno esta aprovado");
+      }else {
+        printf ("O aluno esta reprovado");
+      }
+  } else {
+    printf ("-------------------\n");
+    printf("A media final eh: %3.2f\n", mediaf);
+    printf ("O aluno esta reprovado");  
+  } 
+  return 0;
+}
