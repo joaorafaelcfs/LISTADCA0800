@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+  int l1 = 0, l2 = 0; // Dimensoes da chapa do latao
+  float l3 = 0, volume, zinco, cobre; // area em cm^3
+  printf ("Qual comprimento do latão,em centímetros (cm), você quer? \n");
+  scanf ("%d", &l1);
+  printf ("Qual largura do latão,em centímetros (cm), você quer? \n");
+  scanf ("%d", &l2);
+  printf ("Qual espessura do latão,em milimetros (mm), você quer? \n");
+  scanf ("%f", &l3);
+  volume = l1*l2*(l3*0.1);
+  printf ("O volume do latao é: %.1f cm^3 \n", volume);
+  zinco = volume*0.3;
+  cobre = volume*0.7;
+  printf ("O volume de zinco no latao é: %.1f cm^3 \n", zinco);
+  printf ("O volume de cobre no latao é: %.1f cm^3 \n", cobre);  
+  return 0;
+}
