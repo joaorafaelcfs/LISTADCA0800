@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {  
+  int a = 0, b = 0, c = 0;
+  float x1, x2, delta;
+  printf("digite os coeficientes da equacão do segundo grau \n");
+  printf ("Coeficiente a: ");
+  scanf ("%d", &a);
+  printf ("Coeficiente b: ");
+  scanf ("%d", &b);
+  printf ("Coeficiente c: ");
+  scanf ("%d", &c);
+  printf ("Sua equação é a seguinte: \n");
+  printf ("(%dx^2) + (%dx) + (%d) = 0 \n", a, b, c);
+  printf ("------------------------------- \n");  
+  delta = (b*b) - (4*a*c);
+  if (delta >= 0) {
+    printf("As raizes da sua equação é a seguinte: \n");
+    x1 = ((-b + sqrt (delta))/(2*a));
+    x2 = ((-b - sqrt (delta))/(2*a));
+    printf ("x1 = %.1f e x2 = %.1f \n", x1, x2);    
+  } else {
+    printf ("Delta = %0.1f \n", delta);
+    printf("Não existe raiz real! \n");
+  }
+  return 0;
+}
