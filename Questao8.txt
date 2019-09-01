@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+  int A = 0, B = 0;
+  printf ("Digite um número para A: ");
+  scanf("%d", &A);
+  printf ("Digite um número para B: ");
+  scanf("%d", &B);
+  if (A > B){
+    printf ("O maior número é: %d", A);
+  } else if (A == B){
+    printf ("A = B");
+  } else {
+    printf ("O maior número é: %d", B);
+  }
+  return 0;
+}
