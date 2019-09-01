@@ -1,0 +1,61 @@
+#include <math.h>
+
+int main(void) {
+  float x1 = 0, y1 = 0, x2 = 0,y2 = 0, x3 = 0, y3 = 0;
+  float L1,L2,L3;
+  float tmp1, tmp2, tmp3;
+
+  printf("Digite P1, x: ");
+  scanf ("%f", &x1);
+  printf("Digite P1, y: ");
+  scanf ("%f", &y1);
+
+  printf("Digite P2, x: ");
+  scanf ("%f", &x2);
+  printf("Digite P2, y: ");
+  scanf ("%f", &y2);
+
+  printf("Digite P3, x: ");
+  scanf ("%f", &x3);
+  printf("Digite P3, y: ");
+  scanf ("%f", &y3);
+
+  L1 = sqrt((pow(x1-x2, 2))+(pow(y1-y2,2)));
+  L2 = sqrt((pow(x1-x3, 2))+(pow(y1-y3,2)));
+  L3 = sqrt((pow(x3-x2, 2))+(pow(y3-y2,2)));
+  printf("L1: %f \n", L1);
+  printf("L2: %f \n", L2);
+  printf("L3: %f \n", L3);
+
+  printf("-------- \n");
+
+  if (L1 < L2){
+      tmp1 = L1;
+      L1 = L2;
+      L2 = tmp1;
+  } if (L1 < L3){
+      tmp3 = L1;
+      L1 = L3;
+      L3 = tmp3;
+  } if (L2 < L3){
+      tmp2 = L2;
+      L2 = L3;
+      L3 = tmp2;
+  }
+  printf("L1: %f \n", L1);
+  printf("L2: %f \n", L2);
+  printf("L3: %f \n", L3);
+
+  if (L1 < (L2+L3)){
+    printf("é um triangulo! \n");
+    if (L1 == L2 && L1 == L3){
+    printf("TRIANGULO EQUILATERO \n");
+    } else if (L1 == L2 || L2 == L3 || L2 == L3) {
+      printf("TRIANGULO ISOCELES \n");
+    } else {
+      printf("TRIANGULO ESCALENO \n");
+    }
+  }
+
+  return 0;
+}
